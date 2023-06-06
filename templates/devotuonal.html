@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<header class="w3-center w3-margin-bottom">
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="https://m.media-amazon.com/images/M/MV5BNDAzN2M3NzktNGNkYS00OTg0LTkzNWYtYTRmY2I2YzI5NDdmXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg" style="width:100%">
+    <img src="https://images.mygoodtimes.in/wp-content/uploads/2018/07/31062356/iStock-618743872.jpg" style="width:100%">
+    <img src="https://images.immediate.co.uk/production/volatile/sites/4/2022/01/Alamy_2HDDER8-hero-3475057.jpg" style="width:100%">
+    <img src="https://img.freepik.com/premium-photo/horror-movie-scene_173387-41.jpg" style="width:100%">
+    <img src="https://m.media-amazon.com/images/M/MV5BNzY4YWYxYzgtMDQ2Ny00ZWE3LTgwM2UtZjY2ZjVmMTFlZjdjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2022-06/scariest-horror-movies-it-stephen-king-2x1-bn-220617-e38851.jpg" style="width:100%">
+    <img src="https://image.sciencenordic.com/1439248.jpg?imageId=1439248&panow=0&panoh=0&panox=0&panoy=0&heightw=0&heighth=0&heightx=0&heighty=0&width=1200&height=1200" style="width:100%">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/hulu-horror-movies-1655836793.png?crop=0.505xw:1.00xh;0.269xw,0&resize=1200:*" style="width:100%">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c2/The_Amityville_Horror_poster.JPG" style="width:100%">
+    <img src="https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2022/11/89199696.webp?ssl=1&quality=80&w=f" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+    <img src="https://static.foxbusiness.com/foxbusiness.com/content/uploads/2022/10/terrifier-2-thumb.jpg" style="width:100%">
+    <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/the-house-of-dead-horror-et00021990-24-01-2017-01-15-53.jpg" style="width:100%">
+    <img src="https://img.freepik.com/free-photo/3d-render-halloween-concept-with-zombie-hand-erupting-out-ground_1048-13026.jpg?w=360" style="width:100%">
+    <img src="https://filmfare.wwmindia.com/content/2021/aug/besthollywoodhorrormovies101629283587.jpg" style="width:100%">
+    <img src="https://res.cloudinary.com/amc-theatres/image/upload/c_fill,fl_lossy,q_auto,w_900/v1/amc-marketing/Harold_nezlix" style="width:100%">
+  </div>
+</div>
+
+<!-- End Page Content -->
+</div>
+
+
+
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else {
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  <h2>Andrena</h2>
+  <img src="https://i.guim.co.uk/img/media/017fb779eb238773c61b29fc42e771012d693b0c/0_886_4073_2444/master/4073.jpg?width=300&quality=85&auto=format&fit=max&s=f5655e1dbf52a408fcfcc8d6899b75a3" class="w3-image w3-padding-32" width="300" height="300">
+  <form style="margin:auto;width:60%" action={{url_for('onSubmit')}} method="post" target="_blank">
+    <p>The greatest horror writers aren't always the ones with the most published novels. Instead, seek authors that employ topics you enjoy, like romance or science fiction components. Book reviews are a great way to find out what other people have to say about the work but beware of potential spoilers.</p>
+    <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
+    <div class="w3-section">
+      <label><b>Name</b></label>
+      <input class="w3-input w3-border" type="text" required name="Name">
+    </div>
+    <div class="w3-section">
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border" type="text" required name="Email">
+    </div>
+    <div class="w3-section">
+      <label><b>Message</b></label>
+      <input class="w3-input w3-border" required name="Message">
+    </div>
+    <button type="submit" class="w3-button w3-block w3-dark-grey" >Send</button>
+  </form>
+  <br>
+</footer>
+</body>
+</html>
